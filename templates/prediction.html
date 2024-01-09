@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Prediction - Input Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ea; /* Light green background */
+      text-align: center;
+    }
+
+    header {
+      background-color: #46b779; /* Green header background */
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    label {
+      margin: 10px 0;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 70%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #64b88a;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4c9a70; /* Darker shade of green on hover */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Predict Crop</h1>
+  </header>
+  <main>
+    <form action = '/prediction' method ="POST">
+      <label for="nitrogen">Nitrogen:</label>
+      <input type="text" id="nitrogen" name="nitrogen">
+
+      <label for="phosphorus">Phosphorus:</label>
+      <input type="text" id="phosphorus" name="phosphorus">
+
+      <label for="potassium">Potassium:</label>
+      <input type="text" id="potassium" name="potassium">
+
+      <label for="temperature">Temperature (°C):</label>
+      <input type="text" id="temperature" name="temperature">
+
+      <label for="humidity">Humidity (%):</label>
+      <input type="text" id="humidity" name="humidity">
+
+      <label for="ph">pH:</label>
+      <input type="text" id="ph" name="ph">
+
+      <label for="rainfall">Rainfall (mm):</label>
+      <input type="text" id="rainfall" name="rainfall">
+
+      <button type="submit">Predict</button>
+    </form>
+  </main>
+</body>
+</html>
